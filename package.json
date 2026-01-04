@@ -2,7 +2,7 @@
   "name": "phlexmod-vscode",
   "displayName": "Phlexmod MIA Assistant",
   "description": "Extensión oficial de desarrollo para Phlexmod. Herramientas, snippets y soporte de arquitectura MIA para VS Code, Windsurf y Trae.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "jag-media",
   "homepage": "https://jagmedia.com.ve",
   "icon": "icon.png",
@@ -17,7 +17,11 @@
     "snippets": [
       {
         "language": "php",
-        "path": "./snippets/phlexmod.json"
+        "path": "./snippets/php.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
       }
     ],
     "configuration": {
