@@ -70,19 +70,19 @@
       "    echo json_encode(['status' => 'success', 'data' => \\$data]);",
       "",
       "} catch (Exception \\$e) {",
-      "    // Loguear el error real",
+      "    // Loguear el error real de forma segura",
       "    Logger::error(\"Excepción en ${1:filename}: \" . \\$e->getMessage());",
       "    ",
-      "    // Responder genérico al cliente (salvo que sea error de validación seguro)",
-      "    http_response_code(400); // O 500 según el caso",
-      "    echo json_encode(['status' => 'error', 'message' => \\$e->getMessage()]);",
+      "    // Responder genérico al cliente (Anti-InfoLeak)",
+      "    http_response_code(500);",
+      "    echo json_encode(['status' => 'error', 'message' => 'Error interno del servidor.']);",
       "} finally {",
       "    // Limpieza opcional",
       "    // if (isset(\\$conexion)) { pg_close(\\$conexion); }",
       "}",
       "?>"
     ],
-    "description": "Template para un endpoint API en Phlexmod (MIA Compliant: Logger + Sanitizer)"
+    "description": "Template para un endpoint API en Phlexmod (MIA Compliant: Logger + Sanitizer + Secure Error Handling)"
   },
   "Phlexmod UI Module (BS5.3)": {
     "prefix": "mia-ui",
@@ -222,5 +222,12 @@
       "Logger::${1|info,error,warning,debug|}('${2:Mensaje de log}', ${3:[]});"
     ],
     "description": "Registrar evento usando Logger Core"
+  },
+  "Phlexmod Log Action": {
+    "prefix": "mia-log-action",
+    "body": [
+      "Logger::logAction('${1:ACTION_NAME}', \\$_SESSION['idLogin'] ?? 0, \"${2:Detalles}\");"
+    ],
+    "description": "Registrar auditoría de acción en base de datos"
   }
 }
