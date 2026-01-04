@@ -1,6 +1,6 @@
 {
-  "Phlexmod JS Module": {
-    "prefix": "mia-js",
+  "MIA JS Module": {
+    "prefix": "px-js",
     "body": [
       "/**",
       " * Nombre del Archivo: ${1:filename}.js",

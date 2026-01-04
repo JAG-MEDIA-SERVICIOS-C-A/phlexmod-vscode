@@ -1,6 +1,6 @@
 {
-  "Phlexmod API Endpoint": {
-    "prefix": "mia-api",
+  "MIA API Endpoint": {
+    "prefix": "px-api",
     "body": [
       "<?php",
       "/** ",
@@ -82,10 +82,10 @@
       "}",
       "?>"
     ],
-    "description": "Template para un endpoint API en Phlexmod (MIA Compliant: Logger + Sanitizer + Secure Error Handling)"
+    "description": "Template para un endpoint API en MIA (MIA Compliant: Logger + Sanitizer + Secure Error Handling)"
   },
-  "Phlexmod UI Module (BS5.3)": {
-    "prefix": "mia-ui",
+  "MIA UI Module (BS5.3)": {
+    "prefix": "px-ui",
     "body": [
       "<?php",
       "/** ",
@@ -216,8 +216,8 @@
     ],
     "description": "Ejecutar query parametrizado con manejo de errores seguro (Logger)"
   },
-  "Phlexmod Logger": {
-    "prefix": "mia-log",
+  "MIA Logger": {
+    "prefix": "px-log",
     "body": [
       "Logger::${1|info,error,warning,debug|}('${2:Mensaje de log}', ${3:[]});"
     ],
