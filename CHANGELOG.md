@@ -2,7 +2,12 @@
 
 All notable changes to the "phlexmod-vscode" extension will be documented in this file.
 
+## [1.0.5] - 2026-01-04
+
+- **Corrección**: Solucionada inconsistencia en ruta de endpoint en snippet JS (`px-js`). Ahora usa ruta relativa `../endpoints/` por defecto.
+
 ## [1.0.4] - 2026-01-04
+
 - **Documentación**: Actualizado README para reflejar los nuevos prefijos `px-*` correctamente.
 
 ## [1.0.3] - 2026-01-04
