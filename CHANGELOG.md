@@ -2,6 +2,9 @@
 
 All notable changes to the "phlexmod-vscode" extension will be documented in this file.
 
+## [1.0.4] - 2026-01-04
+- **Documentación**: Actualizado README para reflejar los nuevos prefijos `px-*` correctamente.
+
 ## [1.0.3] - 2026-01-04
 
 - **Ergonomía**: Cambio masivo de prefijo a `px-` (Phlexmod) para mayor consistencia con el icono y rapidez de escritura.

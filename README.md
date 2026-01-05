@@ -12,10 +12,10 @@ Crea archivos que respetan la separación estricta de responsabilidades:
 
 | Snippet    | Función MIA                                                                                                                               |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `mia-api`  | Genera un **Endpoint Soberano** en `/endpoints/`. Incluye validación de sesión, sanitización obligatoria y manejo de errores encapsulado. |
-| `mia-ui`   | Crea una **Vista Aislada** en `/ui/`. Estructura HTML limpia lista para ser consumida por el controlador principal.                       |
-| `san-post` | Implementa **Cero Confianza** en la entrada de datos (`Sanitizer::post`), prohibiendo el uso directo de `$_POST`.                         |
-| `pg-query` | Ejecuta consultas seguras usando el driver nativo de PostgreSQL, siguiendo el principio de **Rendimiento Nativo**.                        |
+| `px-api`   | Genera un **Endpoint Soberano** en `/endpoints/`. Incluye validación de sesión, sanitización obligatoria y manejo de errores encapsulado. |
+| `px-ui`    | Crea una **Vista Aislada** en `/ui/`. Estructura HTML limpia lista para ser consumida por el controlador principal.                       |
+| `px-js`    | Crea un **Módulo JS Modular** con patrón de namespace, evitando colisiones globales.                                                      |
+| `px-log`   | Utilidad rápida para invocar `Logger::info` o `Logger::error` siguiendo estándares de trazabilidad.                                       |
 
 ### 🔧 Configuración Recomendada
 
