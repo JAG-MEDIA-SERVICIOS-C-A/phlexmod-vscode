@@ -2,13 +2,18 @@
   "name": "phlexmod-vscode",
   "displayName": "Phlexmod MIA Assistant",
   "description": "Extensión oficial de desarrollo para Phlexmod. Herramientas, snippets y soporte de arquitectura MIA para VS Code, Windsurf y Trae.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "publisher": "jag-media",
+  "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://jagmedia.com.ve",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.75.0"
   },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "categories": [
     "Snippets",
     "Programming Languages"
@@ -24,6 +29,13 @@
         "path": "./snippets/javascript.json"
       }
     ],
+    "commands": [
+      {
+        "command": "phlexmod.openReviewPage",
+        "title": "PHLEXMOD: Valorar extensión",
+        "category": "PHLEXMOD"
+      }
+    ],
     "configuration": {
       "title": "Phlexmod",
       "properties": {
@@ -31,6 +43,11 @@
           "type": "boolean",
           "default": true,
           "description": "Habilitar snippets de Phlexmod"
+        },
+        "phlexmod.enableTelemetry": {
+          "type": "boolean",
+          "default": false,
+          "description": "Permitir que la extensión registre estadísticas locales de uso y muestre recordatorios opcionales para valorar la extensión."
         }
       }
     }
